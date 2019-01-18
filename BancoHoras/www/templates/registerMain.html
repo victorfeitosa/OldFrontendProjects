@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<div class="container">
+  <!--Form with registration info     -->
+  <form ng-submit="vm.register()">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Registre um usuário</h3>
+      </div>
+      <div class="panel-body">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+          <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+              <div class="form-group">
+                <label for="fullname">Nome</label>
+                <input type="text" class="form-control" ng-model="vm.firstName" ng-required="true">
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+              <div class="form-group">
+                <label for="fullname">Sobrenome</label>
+                <input type="text" class="form-control" ng-model="vm.lastName" ng-required="true">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="registeremail">E-mail</label>
+            <input type="email" class="form-control" placeholder="user@domain.com" ng-model="vm.email" ng-required="true">
+          </div>
+
+          <div class="row">
+            <div class="col-md-8">
+              <div class=" form-group ">
+                <label for="numberhours ">Função</label>
+                <input type="number " class="form-control" placeholder="Desenvolvedor Senior" ng-model="vm.function" ng-required="true">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class=" form-group">
+                <label for="numberhours">Horas Semanais</label>
+                <input type="number" class="form-control " placeholder="40" ng-model="vm.numberHours" ng-required="true">
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <!--collpase of first col-->
+
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+          <div class="row text-center">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <profile-pic src="www/imgs/profile.jpg"></profile-pic>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <span>Escolha a imagem do usuário</span>
+            </div>
+          </div>
+          <!--Collapse of the user's image-->
+        </div>
+        <!--collpase of second col-->
+      </div>
+
+      <div class="panel-footer ">
+        <div class="row ">
+          <div class="col-md-2 col-md-push-5">
+            <button type="submit" class="btn btn-block btn-primary ">Registrar</button>
+          </div>
+        </div>
+      </div>
+      <!--footer collapse-->
+
+    </div>
+    <!-- panel collapse -->
+  </form>
+  <!-- collapse form -->
+</div>
+<!-- collapses container -->

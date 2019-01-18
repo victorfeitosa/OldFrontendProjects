@@ -1,0 +1,12 @@
+$base: #f4f8f9;
+$pale: #d0dce8;
+$strong: hsl(208, 99%, 45%);
+
+$gray-lighter: #fefefe;
+$gray-light: #a6b1b7;
+$gray-medium: #65696c;
+$gray-dark: #40454b;
+
+@mixin block-shadow($blur: 10px, $transparency: .3) {
+  box-shadow: 0 0 $blur rgba($gray-dark, $transparency);
+}

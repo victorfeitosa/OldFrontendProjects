@@ -1,0 +1,10 @@
+//Folders to exclude
+/dist
+/Design
+/.vscode
+/node_modules
+/public/dist
+
+//Files to exclude
+package-lock.json
+npm-debug*

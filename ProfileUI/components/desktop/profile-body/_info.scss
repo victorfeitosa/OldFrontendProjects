@@ -1,0 +1,39 @@
+@import '../../generic/generic';
+.profile-body {
+
+  &__info {
+    &__info-field {
+      align-items: stretch;
+      align-content: center;
+      display: flex;
+      padding: .1rem 0;
+      .info__name-field {
+        background-color: $base;
+        display: flex;
+        align-items: center;
+        padding: 0 2rem 0 1rem;
+      }
+      .info__other-field {
+        background-color: $base;
+        padding: 0 2rem 0 1rem;
+        i {
+        }
+        .info__name-text {
+        }
+      }
+    }
+    &__label {
+    }
+    &__input {
+    }
+  }
+
+  &__edit {
+    background-color: $pale;
+    color: $gray-dark;
+    &:hover {
+    }
+    &:focus {
+    }
+  }
+}

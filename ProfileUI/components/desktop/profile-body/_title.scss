@@ -1,0 +1,10 @@
+@import '../../generic/generic';
+.profile-body {
+  &__top {
+    padding-bottom: 2rem;
+  }
+  &__title {
+    color: $gray-medium;
+    font-size: 18pt;
+  }
+}

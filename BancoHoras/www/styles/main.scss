@@ -1,0 +1,160 @@
+$border-shadow: rgba(25, 25, 25, 0.5);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+//angular-ui-bootstrap specific fix
+.nav,
+.pagination,
+.carousel,
+.panel-title a {
+  cursor: pointer;
+}
+
+//my css------------------------------------------------------------------------
+//body has padding because of the fixed header
+body {
+  padding-top: 70px;
+}
+
+.header-content {
+  opacity: 1;
+  &.ng-enter {
+      transition: 0.5s linear all;
+      opacity: 0;
+  }
+
+  &.ng-enter-active {
+    opacity: 1;
+  }
+
+  &.ng-leave {
+    transition: 0.5s linear all;
+    opacity: 0;
+  }
+}
+
+.content {
+  &.ng-enter {
+      transition: 0.5s linear all;
+      opacity: 0;
+  }
+
+  &.ng-enter-active {
+    opacity: 1;
+  }
+
+  &.ng-leave {
+    transition: 0.5s linear all;
+    opacity: 0;
+  }
+}
+
+.profile-image {
+  border-radius: 50%;
+  max-width: 200px;
+  transition: filter 0.3s linear;
+
+  &-small {
+    @extend .profile-image;
+    max-width: 82px;
+    margin-top: 8px;
+  }
+}
+
+div.profile-pic {
+  display: inline-block;
+  position: relative;
+}
+
+.profile-image-overlay {
+  font-size: 40px;
+  position: absolute;
+  pointer-events: none;
+  color: #fff;
+  opacity: 1;
+}
+
+@mixin border-shadow($width, $color) {
+  border-bottom: $width solid $color;
+}
+
+.border-shadow {
+  @include border-shadow(2px, $border-shadow);
+}
+
+a.click-none {
+  pointer-events: none !important;
+}
+
+.hour-list {
+  &.ng-enter {
+    transition: 0.5s linear all;
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  &.ng-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  &.ng-leave {
+    transition: 0.2s linear all;
+    opacity: 1;
+  }
+}
+
+.photo-file {
+  display: none !important;
+
+  &::before {
+    display: none;
+  }
+}
+
+@keyframes load_anim {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader {
+  $border-thickness: 16px;
+  $border: $border-thickness solid;
+  
+  animation: load_anim 2s linear infinite;
+
+  border: $border transparent;
+  border-radius: 50%;
+  border-top: $border #39aefc;
+  border-right: $border #39aefc;
+  border-left: $border #39aefc;
+  
+  height: 72px;
+  margin: 0 auto;
+  width: 72px;
+
+}
+
+.loader-bg {
+  .modal-content {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+
+    padding-top: 20rem;
+  }
+}
+
+.badge-danger {
+  background-color: #dc143c;
+}
+
+.navbar-admin {
+  background-color: #0e1525;
+}

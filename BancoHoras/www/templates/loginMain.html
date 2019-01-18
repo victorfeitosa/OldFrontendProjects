@@ -1,0 +1,19 @@
+<div class="col-md-4 col-md-offset-4">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Login</h3>
+    </div>
+    <div class="panel-body">
+      <form ng-submit="vm.userLogin()">
+        <div class="form-group">
+          <label for="email">E-Mail</label>
+          <input type="email" class="form-control" ng-required="true" placeholder="user@domain.com" ng-model="vm.userEmail">
+        </div>
+        <br/>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary ">Submit</button>
+        </div>
+      </form> <!-- form collapse -->
+    </div>  <!-- panel body collapse -->
+  </div> <!-- panel collapse -->
+</div>

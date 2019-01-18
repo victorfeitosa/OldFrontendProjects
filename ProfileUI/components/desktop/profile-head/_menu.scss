@@ -1,0 +1,26 @@
+@import '../../generic/generic';
+
+.profile-head {
+  &__menu {
+    align-items: center;
+    @include block-shadow(10px, .1);
+    display: flex;
+    justify-content: space-between;
+    margin-top: -1.75rem;
+    padding: 0 0 0 12rem;
+
+    &__selector {
+      top: 56px;
+    }
+    &__list {
+      box-shadow: none;
+      display: inline-block;
+    }
+
+    &__item {
+      font-size: 10pt;
+      &:hover {
+      }
+    }
+  }
+}

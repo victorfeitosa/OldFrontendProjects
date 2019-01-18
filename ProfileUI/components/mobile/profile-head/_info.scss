@@ -1,0 +1,97 @@
+@import '../../generic/generic';
+
+.profile-head {
+  &__top {
+    padding: 1rem 2.5rem 1.5rem 0;
+    text-align: right;
+
+    &__log {
+      color: $strong;
+      font-size: 9pt;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 1rem 0;
+
+    &__user-name {
+      align-self: center;
+      color: $gray-dark;
+      font-size: 14pt;
+      font-weight: 500;
+    }
+  }
+
+  &__info-photo {
+    height: 150px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .profile-image {
+      background-image: url('/public/imgs/profile_image.jpg');
+      background-size: contain;
+      background-position: top center;
+      border-radius: 50%;
+      @include block-shadow(50px);
+
+      width: 140px;
+      height: 140px;
+    }
+  }
+
+  &__info-content {
+    color: $gray-light;
+    padding: 2rem 1rem 0 1.5rem;
+
+    &__info {
+      padding: .25rem 0;
+      i {
+        color: $gray-light;
+        font-size: 14pt;
+      }
+    }
+    &__info-text {
+      color: $gray-medium;
+      font-size: 10pt;
+      font-weight: 300;
+      padding-left: .5rem;
+    }
+
+    &__rating {
+      color: $strong;
+      font-size: 18pt;
+    }
+
+    &__info-pop {
+      color: $gray-dark;
+      font-size: 13pt;
+      font-weight: 400;
+    }
+
+    &__info-button {
+      padding-top: 1rem;
+
+      &__link {
+        align-items: center;
+        display: flex;
+      }
+      
+      i {
+        font-size: 22pt;
+        padding-right: .5rem;
+        transition: color .3s ease-in-out;
+
+        &:hover {
+          color: $strong;
+        }
+      }
+    }
+  }
+}

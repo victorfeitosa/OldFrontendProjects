@@ -1,0 +1,42 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" aria-hidden="true" ng-click="mvm.close()">&times;</button>
+    <h4 class="modal-title">Configurações de Usuário</h4>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="input-group">
+          <label for="userNameInput">Nome de Usuário</label>
+          <input type="text" class="form-control" id="userNameInput" ng-model="mvm.user.name">
+        </div>
+        <br><br>
+        <div class="input-group">
+            <label>
+              Remover alertas lidos diariamente&nbsp;<input type="checkbox"  ng-model="mvm.user.removeAlerts">
+            </label>
+          </div>
+      </div>
+      <div class="col-md-6">
+        <div class="input-group">
+          <label for="userJobInput">Posição</label>
+          <input type="text" class="form-control" id="userJobInput"  ng-model="mvm.user.role">
+        </div>
+        <br>
+        <label>
+            Horas Semanais 
+            <select class="form-control" ng-model="mvm.user.weeklyHours">
+              <option value="20">20 Horas/Semana</option>
+              <option value="30">30 Horas/Semana</option>
+              <option value="40">40 Horas/Semana</option>
+              <option value="44">44 Horas/Semana</option>
+            </select>
+          </label>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" ng-click="mvm.close()">Close</button>
+    <button type="button" class="btn btn-primary" ng-click="mvm.save()">Salvar <i class="glyphicon glyphicon-save"></i></button>
+  </div>
+</div>

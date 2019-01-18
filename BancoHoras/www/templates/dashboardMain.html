@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<div class="jumbotron">
+    <div class="row">
+
+        <div class="col col-md-1">
+
+        </div>
+        <div class="col col-md-3">
+            <profile-pic src="{{vm.user.photo}}" ></profile-pic>
+        </div>
+
+        <div class="col col-md-8">
+            <h1 ng-bind="vm.user.name"></h1>
+            <p ng-bind="vm.user.role"></p>
+        </div>
+    </div>
+    <!-- Jumbotron first row -->
+
+    <div class="row">
+        <div class="col-md-1 col-md-offset-1"><h4><span class="label label-primary border-shadow">{{vm.user.weeklyHours}}h semanais</span></h4></div>
+        <div class="col-md-1"><h4><span class="label label-{{vm.totalStatus}} border-shadow">Saldo: {{vm.user.balanceHours}}h</span></h4></div>
+    </div>
+</div>
+<!-- Jumbotron collapse -->
+
+<!-- Botões de funcionalidades -->
+<div class="col-md-12 container">
+    <div class="col-md-4 col-md-offset-1 col-sm-4">
+        <uib-pagination items-per-page="vm.numLimite" total-items="vm.numEntradas" ng-model="vm.paginaAtual" ng-change="vm.mudaPagina()"
+            class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;">
+        </uib-pagination>
+    </div>
+    <div class="col-md-4 col-md-offset-3 col-sm-5 col-sm-offset-3">
+        <button type="button" class="fa fa-plus-square btn btn-success border-shadow" ng-click="vm.overHour();">
+     Cumprir horas
+  </button>
+        <button type="button" class="fa fa-minus-square btn btn-danger border-shadow" ng-click="vm.underHour();">
+     Registrar falta
+  </button>
+    </div>
+</div>
+
+
+<!-- Tabela de registro de horas (faltas e cumprimentos) -->
+<div class="container">
+    <table class="table table-hover table-responsive">
+        <caption>Últimos registros</caption>
+        <thead>
+            <tr class="info">
+                <th class="col-sm-2">Data</th>
+                <th class="col-sm-8">Razão</th>
+                <th class="col-sm-1 text-center">Horas</th>
+                <th class="col-sm-1 text-center">&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="element in vm.bancoHoras | limitTo: vm.numLimite : vm.entradaInicial | orderBy:'-element.date'"
+                class="hour-list">
+                <td>{{element.date.getDate()}}/{{element.date.getMonth()+1}}/{{element.date.getFullYear()}}</td>
+                <td ng-bind="element.reason"></td>
+                <td ng-bind="element.quant" class="text-center"></td>
+                <td class="text-center">
+                    <button ng-click="vm.removeEntry(element)" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="{{vm.totalStatus}}">
+                <td colspan="2">Total</td>
+                <td ng-bind="vm.balanceHours" class="text-center"></td>
+                <td class="text-center">&nbsp;</td>
+            </tr>
+        </tfoot>
+    </table>
+    <!--End of hour table -->
+</div>

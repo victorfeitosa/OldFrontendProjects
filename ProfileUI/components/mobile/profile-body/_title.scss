@@ -1,0 +1,51 @@
+@import '../../generic/generic';
+.profile-body {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+  &__title {
+    color: $gray-light;
+    font-size: 15pt;
+    font-weight: 300;
+  }
+  &__edit {
+    background: $base;
+    border: 0;
+    color: $gray-light;
+    padding: .5rem;
+    transition: all .3s ease-in-out;
+    &:hover, &:focus {
+      background: $strong;
+      border: 0;
+      color: $gray-lighter;
+      outline: none;
+    }
+  }
+  &__edit-buttons {
+    display: none;
+  }
+  &__cancel,
+  &__save {
+    background: $gray-lighter;
+    border: 0;
+    color: $strong;
+    cursor: pointer;
+    font-weight: 500;
+    opacity: 0;
+    padding: .5rem;
+    transition: all .3s ease-in-out;
+    &:hover {
+      background: $gray-lighter;
+      color: $gray-dark;
+    }
+    &:focus {
+      background: $gray-lighter;
+      border: 0;
+      color: $gray-dark;
+      outline: none;
+    }
+  }
+}

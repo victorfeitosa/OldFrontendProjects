@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav,
+.pagination,
+.carousel,
+.panel-title a {
+  cursor: pointer;
+}
+
+body {
+  padding-top: 70px;
+}
+
+.header-content {
+  opacity: 1;
+}
+
+.header-content.ng-enter {
+  transition: 0.5s linear all;
+  opacity: 0;
+}
+
+.header-content.ng-enter-active {
+  opacity: 1;
+}
+
+.header-content.ng-leave {
+  transition: 0.5s linear all;
+  opacity: 0;
+}
+
+.content.ng-enter {
+  transition: 0.5s linear all;
+  opacity: 0;
+}
+
+.content.ng-enter-active {
+  opacity: 1;
+}
+
+.content.ng-leave {
+  transition: 0.5s linear all;
+  opacity: 0;
+}
+
+.profile-image, .profile-image-small {
+  border-radius: 50%;
+  max-width: 200px;
+  transition: filter 0.3s linear;
+}
+
+.profile-image-small {
+  max-width: 82px;
+  margin-top: 8px;
+}
+
+div.profile-pic {
+  display: inline-block;
+  position: relative;
+}
+
+.profile-image-overlay {
+  font-size: 40px;
+  position: absolute;
+  pointer-events: none;
+  color: #fff;
+  opacity: 1;
+}
+
+.border-shadow {
+  border-bottom: 2px solid rgba(25, 25, 25, 0.5);
+}
+
+a.click-none {
+  pointer-events: none !important;
+}
+
+.hour-list.ng-enter {
+  transition: 0.5s linear all;
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.hour-list.ng-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.hour-list.ng-leave {
+  transition: 0.2s linear all;
+  opacity: 1;
+}
+
+.photo-file {
+  display: none !important;
+}
+
+.photo-file::before {
+  display: none;
+}
+
+@keyframes load_anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  animation: load_anim 2s linear infinite;
+  border: 16px solid transparent;
+  border-radius: 50%;
+  border-top: 16px solid #39aefc;
+  border-right: 16px solid #39aefc;
+  border-left: 16px solid #39aefc;
+  height: 72px;
+  margin: 0 auto;
+  width: 72px;
+}
+
+.loader-bg .modal-content {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding-top: 20rem;
+}
+
+.badge-danger {
+  background-color: #dc143c;
+}
+
+.navbar-admin {
+  background-color: #0e1525;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="close()">&times;</button>
+  <h3 class="modal-title">{{mdTitle}}</h3>
+</div>
+<div class="modal-body row">
+  <form method="post" ng-submit="ok()">
+    <div class="form-group col-md-6 col-xs-6 col-sm-6">
+      <label for="reason">Data</label>
+      <input  type="date" class="form-control" ng-model="hourDate" />
+    </div>
+    <div class="form-group col-md-6 col-xs-6 col-sm-6">
+      <label for="reason">Quantidade de Horas</label>
+      <input type="number" class="form-control" id="txtQuant" ng-model="hourQuant">
+    </div>
+    <div class="form-group col-md-12">
+      <label for="reason">Razão</label>
+      <input  type="text" class="form-control" id="txtReason" ng-model="hourReason" placeholder="Falta ou hora extra">
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-danger" data-dismiss="modal" ng-click="close()">Cancel</button>
+  <button type="button" class="btn btn-primary" ng-click="ok()">Ok</button>
+</div>

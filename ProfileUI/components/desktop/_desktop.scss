@@ -1,0 +1,15 @@
+@import './profile-head/head';
+@import './profile-body/body';
+
+body {
+  background-color: $base;
+  padding: 5vw 12vh;
+}
+
+.desktop {
+  display: initial;
+}
+
+.mobile {
+  display: none;
+}

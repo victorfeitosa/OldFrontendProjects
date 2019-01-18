@@ -1,0 +1,12 @@
+@import '../../generic/generic';
+@import './title';
+@import './info';
+
+
+.profile-body {
+  @include block-shadow;
+  background-color: $gray-lighter;
+  margin-top: 3rem;
+  min-height: 75vh;
+  padding: 3rem;
+}

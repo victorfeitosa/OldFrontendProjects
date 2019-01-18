@@ -1,0 +1,49 @@
+@import '../../generic/generic';
+
+.profile-head {
+  &__menu {
+    padding: 2rem 0;
+    position: relative;
+
+    &__selector {
+      background-color: $strong;
+      height: 2px;
+      position: absolute;
+      top: 86px;
+      transition: left .1s ease-in-out, width .1s ease-in-out, opacity .1s ease-in-out;
+      width: 1px;
+      z-index: 2;
+    }
+
+    &__list {
+      @include block-shadow(10px, .2);
+      background-color: $gray-lighter;
+      display: flex;
+      list-style: none;
+      margin-left: 0;
+      overflow: hidden;
+      position: relative;
+      white-space: nowrap;
+    }
+
+    &__item {
+      color: $gray-dark;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 11pt;
+      font-weight: 500;
+      left: 0;
+      margin: 0 1rem;
+      padding: 1.25rem 0;
+      position: relative;
+      text-align: center;
+      text-transform: uppercase;
+
+      transition: all .1s ease-in-out;
+
+      &:hover {
+        color: $strong;
+      }
+    }
+  }
+}

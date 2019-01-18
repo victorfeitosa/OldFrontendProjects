@@ -1,0 +1,40 @@
+
+<div class="container-fluid">
+  <div class="col-md-8">
+    <h3>Lista de funcionários</h3>
+  </div>
+  <div class="col-md-4">
+    <div class="input-group">
+      <div class="input-group-addon"><i class="glyphicon glyphicon-filter"></i></div>
+      <input type="text" class="form-control" ng-model="vm.userFilter" placeholder="Procure por um funcionário">
+    </div>
+  </div>
+</div>
+  
+<table class="table table-striped table-hover">
+  <thead>
+    <tr class="info">
+      <th class="col-sm-5">Nome</th>
+      <th class="col-sm-3">Função</th>
+      <th class="col-sm-2 text-center">Horas/Semana</th>
+      <th class="col-sm-2 text-center">Saldo de Horas</th>
+      <th class="col-sm-1 text-center">-</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="employee in vm.employees | filter:vm.userFilter"
+      ng-class="{ warning: employee.total < 0,
+                  danger: employee.total < (-employee.hours/10),
+                  success: employee.total > 0}">
+      <td class="col-sm-5">{{employee.name}}</td>
+      <td class="col-sm-3">{{employee.position}}</td>
+      <td class="col-sm-2 text-center">{{employee.hours}}</td>
+      <td class="col-sm-2 text-center">{{employee.total}}</td>
+      <td class="col-sm-2 text-center">
+        <button title="Mandar alerta" class="btn btn-warning" ng-click="" >
+          <i class="glyphicon glyphicon-envelope" ></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
